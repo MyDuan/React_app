@@ -20,6 +20,9 @@ function App() {
           Create A sample React App.
         </a>
       </header>
+      <div>
+      <Route path='/'/>
+      </div>
     </div>
   );
 }
