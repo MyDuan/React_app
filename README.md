@@ -7,3 +7,4 @@
 
 ### push to github pages
 - `npm run deploy`
+- URL: https://myduan.github.io/react_app/
