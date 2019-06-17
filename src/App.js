@@ -3,22 +3,33 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    // stateを定義してください
+    this.state = {count:0}
+
+  }
+
+  handleClick_u() {
+      this.setState({count:this.state.count + 1});
+  }
+
+  handleClick_d() {
+    if(this.state.count > 0){
+      this.setState({count:this.state.count - 1});
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Create A sample React App.
-          </a>
+          <h1>
+            {this.state.count}
+          </h1>
+          <button onClick={()=>{this.handleClick_u()}}>+</button>
+          <button onClick={()=>{this.handleClick_d()}}>-</button>
         </header>
       </div>
     );
