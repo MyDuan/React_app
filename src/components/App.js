@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Language from './Language'
 import logo from '../logo.svg';
 import '../App.css';
 
@@ -25,6 +26,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <h1>言語一覧</h1>
+          <div className="language">
+            <Language/>
+          </div>
           <h1>
             {this.state.count}
           </h1>
