@@ -23,12 +23,34 @@ class App extends Component {
   }
 
   render() {
+
+    const languageList = [
+      {
+        name: 'HTML & CSS',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/html.svg'
+      },
+      {
+        name: 'JavaScript',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/es6.svg'
+      },
+      {
+        name: 'React',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/react.svg'
+      }];
+
     return (
       <div className="App">
         <header className="App-header">
           <h1>言語一覧</h1>
           <div className="language">
-            <Language/>
+            {languageList.map((languageItem) => {
+              return (
+                <Language
+                  name = {languageItem.name}
+                  image = {languageItem.image}
+                />
+              )
+            })}
           </div>
           <h1>
             {this.state.count}
